@@ -895,43 +895,371 @@
 
 //re declaration
 
-let d = false;
- d = true;
-console.log(d);
+// let d = false;
+//  d = true;
+// console.log(d);
 
-function fn(){
-     let d = null;
-    console.log(d);
+// function fn(){
+//      let d = null;
+//     console.losg(d);
+// }
+
+// fn();
+
+// console.log(d);
+
+
+// var a,b,d;
+// a = "ayub";
+// b = "dharan";
+
+// function test(x,y){
+//     d= "Hello " + x + " from " + y;
+//     return d;
+// }
+
+// console.log(test(a,b));
+
+ //challenge
+
+//  numbers = [23, 87, 110, 11, 20, 5, 34];
+//  numbers2 = [11, 21, 31];
+
+//  var onlyOddNumers = function(arr) {
+//      oddNumbers = [];
+//      even_numbers_quantity = 0;
+//      len = arr.length;
+
+//      for(i = 0; i<len; i++){
+//          arr[i] % 2
+//          ? oddNumbers.push(arr[i])
+//          : even_numbers_quantity++;
+//      }
+
+//      var info;
+//      if(even_numbers_quantity === 0){
+//          info = "Array contains only odd numbers";
+//          console.log(info);
+//      }
+//      else{
+//          info = "There are " + even_numbers_quantity + " even numbers";
+//      }
+
+
+//  "use strict"
+
+//  const numbers1 = [23, 87, 110, 11, 20, 5, 34];
+//  const numbers2 = [11, 21, 31];
+
+//  var onlyOddNumbers = function(arr){
+//      var oddNumbers = [];
+//      var even_numbers_quantity = 0;
+//      const LEN = arr.length;
+
+//      for(let i = 0; i<LEN; i++){
+//          arr[i] % 2
+//          ? oddNumbers.push(arr[i])
+//          : even_numbers_quantity++;
+//      }
+
+//      if(even_numbers_quantity === 0){
+//          let info = "Array contains only odd numbers";
+//          console.log(info);
+//      }
+
+//      else{
+//          let info = "There are " + even_numbers_quantity + " even numbers.";
+//          console.log(info);
+//      }
+
+//      return {
+//          oddNumbers : oddNumbers,
+//          even_numbers_quantity : even_numbers_quantity
+//      };
+//  };
+
+//  console.log(onlyOddNumbers(numbers1));
+
+
+// const menuItems = document.querySelectorAll(".nav-link");
+// const LEN = menuItems.length;
+
+// for(let i=0; i< LEN; i++){
+//     const menuItem = menuItems[i];
+
+//     menuItem.onclick = function(){
+//         for(let j=0; j<LEN; j++){
+//             menuItems[j].classList.remove("active");
+//         }
+
+//         menuItem.classList.add("active");
+//         console.log(menuItem.innerHTML);
+//     };
+// }
+
+// //anonymous function expression
+
+// function (a,b) {
+//     return a+b;
+// }
+
+// (a,b) => a + b
+
+
+// const sum = (a,b) => a + b;
+// console.log(sum(1,1));
+
+// const post = {
+//     title: "Sample Title",
+//     comments: 3,
+//     shared: true,
+//     published: true,
+//     postID: 5134
+// }
+
+// const processedPost = (post) => {
+//     return {
+//         title: post.title,
+//         comments: post.comments,
+//         popular: post.comments > 5 ? true : false
+//     }
+// };
+// console.log(processedPost(post));
+
+
+// const processedPost = function(posts){
+//     return{
+//         title: post.title,
+//         comments: post.comments,
+//         popular: post.comments > 5 ? true : false
+//     }
+// };
+// console.log(processedPost(post));
+
+
+// const processedPost = (posts) => 
+//     ({
+//         title: post.title,
+//         comments: post.comments,
+//         popular: post.comments > 5 ? true : false
+//     }
+// );
+// console.log(processedPost(post));
+
+// (() => {
+//     function greet(){
+//         return "Hey what is up dawg!!!"
+//     }
+//     console.log(this);
+//     this.greet = greet;
+//     return this;
+// })
+
+
+// const createButton = () => {
+//     const btn = document.createElement("button");
+//     btn.innerHTML = "Click Me";
+    
+    
+// }
+// const createButton = () => {
+//     const btn = document.createElement("button");
+//     let clickQty = 0;
+//     btn.innerHTML = "CLick me";
+//     btn.onclick = function() {
+//         console.log("Button was clicked");
+//         btn.innerHTML = "Button was clicked " + ++clickQty + " times";
+//     };
+
+//     document.body.appendChild(btn);
+// }
+
+// createButton();
+
+ 
+
+// const myArray = [1, "ayub", true];
+// const LEN = myArray.length;
+
+// for(let i =0; i < LEN; i++){
+//     console.log(myArray[i]);
+// }
+
+// myArray.forEach(element => console.log(element));
+
+// myArray.forEach(function (element){
+//     console.log(element);
+// });
+
+
+// const myCities = ["London", "New York", "Singapore"];
+
+// function arrayInfo(){
+//     for(let i=0; i < myCities.length; i++){
+//         console.log(myCities[i] + " is located at index " + i + " in the myCities array." ) 
+//     }
+// }
+
+// arrayInfo(myCities);
+
+
+// const myCities = ["London", "New York", "Singapore"];
+// const LEN = myCities.length;
+
+// const arrayInfo = (element, index) => (element + " is located at index " + index + " in myCities array");
+
+// for(let i = 0; i<LEN; i++){
+//     console.log(arrayInfo(myCities[i], i));
+// }
+
+
+// myCities.forEach((element, index) => console.log(arrayInfo(element, index)));  
+
+// //map() array helper method
+// const myNumbers = [1, 5, 7];
+
+// let mySquareNumbers = myNumbers.map((element => element * element));
+
+// console.log(mySquareNumbers);
+
+
+  //map() with external function
+
+//   const myNumbers = [1, 5, 7];
+
+//   const squareNUmbers = element => element * element;
+  
+//   let mySquareNumbers = myNumbers.map(squareNUmbers) ;
+//   console.log(mySquareNumbers);
+
+
+// const postsJSON = [
+//     '{"postId" : 1355, "commentsQuanity" : 5}',
+//     '{"postId" : 2345, "commentsQuanity" : 25}',
+//     '{"postId" : 5135, "commentsQuanity" : 35}',
+// ];
+
+// //from the postsJSON array, create "posts" array that wil consists of JS objects
+// //for loop
+// // var posts = [];
+// // for(i = 0; i< postsJSON.length; i++){
+// //     posts.push(JSON.parse(postsJSON[i]));
+// // }
+
+// // console.log(posts);
+// // console.log(posts[0].postId); //1135
+
+
+// //map()
+// const posts = postsJSON.map(JSON.parse);
+// console.log(posts);
+
+
+//  const posts = [ 
+//      {postId: 1355, commentsQuantity: 5},
+//      {postId: 5131, commentsQuantity: 13},
+//      {postId: 6134, commentsQuantity: 2}
+//  ];
+
+//  const findSinglePost = (postId, posts) => posts.find(post => post.postID === postId);
+//  console.log(findSinglePost(1255, posts)); 
+
+// const myNumbers = [3, 5, 1, 2, 44];
+
+// const isPositiveNumber = element => typeof element === "number" && element > 0;
+// console.log(isPositiveNumber(myNumbers));
+// console.log(".....................")
+// const positiveCheck = myNumbers.every(isPositiveNumber);
+// console.log(positiveCheck)
+
+// const a = [5, "abc", 10, 1];
+// const b = [4, 10, 14, 25, 25, 50];
+// const c = [150, 132, 24, 4];
+// const d = [15, 26, 34, 11, 44, 23];
+
+// Create a function "arrayCheck" with one parameter - "inputArray"
+
+// const arrayCheck = (inputArray) => {
+//     if(inputArray.some(element => typeof element !== "number"))
+//     {
+//         return "Some elements are not number"
+//     }
+
+//     if(inputArray.every((element, index, array) => index>0
+//         ? element >= array[index -1]
+//         : true)) {
+//             return "Array is sorted in ascending order"
+//         }
+    
+// };
+
+// console.log(arrayCheck(a));
+// console.log(arrayCheck(b));
+
+
+// const a = [1, 2, 3];
+// const b = [1, 2, 3]; 
+
+// // const arraysAreEqual = (arrayOne, arrayTwo) => {
+// //     for(let i = 0; i < arrayOne.length; i++){
+// //         for(let j=0; j< arrayTwo.length; j++){
+// //             if(arrayOne[i] === arrayTwo[j]){
+// //                 console.log("true");
+// //             }
+// //             else{
+// //                 console.log("false");
+// //             }
+// //         }
+// //     }
+// // }
+
+// const c = [2, 1, 3];
+// const d = [1, 2, 3, 4];
+
+
+
+
+// const arraysAreEqual = (arrayOne, arrayTwo) => (
+//     arrayOne.length === arrayTwo.length && arrayOne.every((element, index) => element === arrayTwo[index])
+// )
+
+// console.log(arraysAreEqual(a,b));
+// console.log(arraysAreEqual(a,c));
+
+
+//  const transport = ["Bus", "Car", "Bicycle", "Airplane"];
+
+//  const elementFound = (inputArray, searchElement) => (
+//      inputArray.some((element) => element === searchElement)
+//     )
+
+//     console.log(elementFound(transport, "Bus"));
+//     console.log(elementFound(transport, "Phone"));
+     
+//  const myArray = [10, "abc", true, undefined, null, [1,2]];
+//  console.log(myArray.includes(10));
+
+const tags = [
+    ["javascript", "es6"],
+    ["css", "flexbox"],
+    ["html", "web-browser"]
+];
+
+const fruits = [
+    {title: "Orange", quantity: 10},
+    {title: "Banana", quantity: 5},
+    {title: "Apple", quantity: 25}
+];
+
+const primitiveTypesArray = [
+    25,
+    "x",
+    true,
+    null
+];
+
+const elementIsincluded = (searchElement, array) => {
+    if(typeof searchElement !== "object") {
+        return array.includes(searchElement);
+    }
 }
-
-fn();
-
-console.log(d);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
